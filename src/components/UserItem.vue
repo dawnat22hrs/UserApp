@@ -28,12 +28,12 @@
 <template>
     <div class="user-item">
             <div class="name">
-                <RouterLink :to="`user/${id}`" class="user-link"><h2 class="user-item__name"><!--{{ user.name }}-->{{ name }}</h2></RouterLink>
-                <span class="user-item__nickname">@<!--{{ user.username }}-->{{ username }}</span>
+                <RouterLink :to="`user/${id}`" class="user-link"><h2 class="user-item__name">{{ name }}</h2></RouterLink>
+                <span class="user-item__nickname">@{{ username }}</span>
             </div>
             <div class="con">
-                <span class="email user-item_bgc text"><!--{{ user.email }}-->{{ email }}</span>
-                <span class="tel user-item_bgc text"><!--{{ user.phone }}-->{{ phone }}</span>
+                <span class="email user-item_bgc text">{{ email }}</span>
+                <span class="tel user-item_bgc text">{{ phone }}</span>
             </div>
         </div>  
 </template>
