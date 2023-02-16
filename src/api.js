@@ -22,7 +22,15 @@ export default{
                     Prefer: `code=200, example=Example ${id}`
                 }
             })
-            console.log(response.data)
+            return response.data
+        } catch (e) {
+            console.log(e);
+        }
+    },
+
+    async postUser(newUser) {
+        try {
+            const response = await HTTP.post('/users', newUser)
             return response.data
         } catch (e) {
             console.log(e);

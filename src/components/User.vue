@@ -6,7 +6,7 @@
 
     const route = useRoute();
     const userID = ref("");
-    let carrentUser = ref({});
+    const carrentUser = ref({});
 
     onMounted(async() => {
         userID.value = route.params.id

@@ -28,7 +28,7 @@
 <template>
     <div class="user-item">
             <div class="name">
-                <RouterLink :to="`user/${id}`" class="user-link"><h2 class="user-item__name">{{ name }}</h2></RouterLink>
+                <RouterLink :to="`users/${id}`" class="user-link"><h2 class="user-item__name">{{ name }}</h2></RouterLink>
                 <span class="user-item__nickname">@{{ username }}</span>
             </div>
             <div class="con">

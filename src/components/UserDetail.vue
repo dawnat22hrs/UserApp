@@ -4,6 +4,7 @@
             type: Object,
             default: () => {},
             required: true,
+            company: Object,
         }
     });
 </script>
@@ -29,11 +30,11 @@
             </div>
             <div class="company-block wrap__el">
                 <span class="subtitle info-block__subtitle">Company</span>
-                <span class="text">{{ user.company }}</span>
+                <span class="text" v-for="name of user">{{ name.name }}</span>
             </div>
             <div class="address-block wrap__el">
                 <span class="subtitle info-block__subtitle">Address</span>
-                <span class="text ">{{ user.address }} {{ user.address }}, {{ user.address }}, {{ user.address }}</span>
+                <span class="text" v-for="address of user">{{ address.suite }} {{ address.street }} {{ address.city}} {{ address.zipcode }}</span>
             </div>
         </div>
         </div>

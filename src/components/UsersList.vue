@@ -1,5 +1,4 @@
 <script setup>
-    
     import UserItem from './UserItem.vue';
 
     const props = defineProps({

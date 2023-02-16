@@ -1,4 +1,4 @@
-<script setup>
+<script setup >
     import User from '../components/User.vue';
 </script>
 
