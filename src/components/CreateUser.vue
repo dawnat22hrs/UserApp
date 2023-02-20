@@ -155,4 +155,76 @@ const submit = () => {
             gap: 20px;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        .input-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 40px;
+
+            .input {
+                max-width: 40vw;
+            }
+
+            .input-block__suit {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .input-block__zipcode {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .input-last {
+                max-width: 40vw;
+            }
+
+            .input-block:last-child {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+        }
+
+        form {
+            margin-bottom: 32px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        .input-list {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin-bottom: 40px;
+
+            .input {
+                max-width: 100vw;
+            }
+
+            .input-block__suit {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .input-block__zipcode {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .input-last {
+                width: 100vw
+            }
+
+            .input-block:last-child {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+        }
+
+        form {
+            margin-bottom: 32px;
+        }
+    }
 </style>

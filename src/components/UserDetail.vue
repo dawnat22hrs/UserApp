@@ -13,7 +13,8 @@
     <div class="info-user">
         <div class="container">
         <div class="title-block">
-            <h1 class="title">{{ user.name }}<sup class="text title-block__text text_color">@{{ user.username }}</sup></h1>
+            <h1 class="title">{{ user.name }}</h1>
+            <p class="text title-block__text text_color">@{{ user.username }}</p>
         </div>
         <div class="info-block">
             <div class="email-block wrap__el">
@@ -43,11 +44,12 @@
 
 <style scoped lang="scss">
     .title-block {
+        display: flex;
 
-&__text {
-    vertical-align: top;
-    margin-left: 16px;
-}
+        &__text {
+            margin-left: 16px;
+            margin-top: 56px;
+        }
 
 .text_color {
     color: #000;
@@ -71,5 +73,58 @@ grid-row-gap: 32px;
 .info-block__subtitle {
     margin-bottom: 8px;
 }
+}
+
+@media screen and (max-width: 1024px) {
+    .title-block {
+        display: flex;
+
+        &__text {
+            margin: 56px 0 32px 16px;
+        }
+    }
+
+    .info-block {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title-block {
+        display: flex;
+
+        &__text {
+            margin: 56px 0 32px 16px;
+        }
+    }
+
+    .info-block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 32px;
+    }
+
+}
+
+@media screen and (max-width: 390px) {
+    .title-block {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            margin-bottom: 0;
+        }
+
+        &__text {
+            margin: 8px 0 32px 0;
+        }
+    }
+
+    .info-block {
+        display: flex;
+        flex-direction: column;
+    }
 }
 </style>
